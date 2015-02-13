@@ -40,3 +40,10 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem "devise"
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+
+gem 'bootstrap-sass'
+gem 'faker'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
