@@ -1,0 +1,11 @@
+<li>
+  <h4><%= link_to question.title, question %></h4> by <%= question.user.email %>
+  <% if user_signed_in? and current_user.id == question.user_id %>
+	<%= link_to 'Edit', edit_question_path(question) %>
+    | <%= button_to question_path(question), method: :delete, 
+								data: { confirm: "You sure?" }, class: 'btn-link' do %>
+		Delete
+	<% end %>
+								  
+  <% end %>
+</li>
