@@ -8,4 +8,8 @@
   <% if !user_signed_in? %>
   <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
   <% end %>
+  <%= link_to 'index', questions_path,class: "btn btn-lg btn-primary" %>
+  <% if user_signed_in? %>
+  <%= link_to 'new',new_question_path,class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
