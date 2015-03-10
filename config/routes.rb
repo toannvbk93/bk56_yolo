@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
-  #resources :questions
-  resources :questions, only: [:index, :show]
-
-  authenticated :user do
-    scope module: :user do
-      resource :question, except: [:index, :show]
-    end
-  end
+  resources :questions
   devise_for :users
   root :to =>'questions#index'
   # The priority is based upon order of creation: first created -> highest priority.
