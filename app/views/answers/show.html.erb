@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @answer.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @answer.user.email %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @answer.question.content %>
+</p>
+
+
+<%= link_to 'Back', question_answers_path %>
