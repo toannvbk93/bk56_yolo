@@ -1,0 +1,8 @@
+<h1>Listing answers</h1>
+<%= will_paginate %>
+<%= @question.content%>
+<ul class="questions">
+  <%= render @answers %>
+</ul>
+
+<%= will_paginate %>
