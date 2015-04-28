@@ -11,7 +11,9 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    respond_with(@question)
+    @answers = @question.answers.paginate(page: params[:page])
+    respond_with(@question,@answers)
+    #respond_with(@question)
   end
 
   def new
